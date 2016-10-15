@@ -24,10 +24,10 @@ function recursiveApproach(i, data) {
     recursiveApproach(i+1,data);
   }
   else{
-    if(data[i] >= 250){
+    if(data[i] >= 245){
 
       data[i] = 0;
-      recursiveApproach(i+5,data);
+      recursiveApproach(i+10,data);
     }
     else{
       data[i] = data[i]+10;
