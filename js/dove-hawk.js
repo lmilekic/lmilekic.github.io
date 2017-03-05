@@ -1,27 +1,50 @@
+//javascript that simulates a grid where hawkes and doves interact
 
-var arr;
-generateArr(10, 10);
-renderArr()
+//an array that keeps track of the grid
+var gridArray = [];
 
-function generateArr(width, height) {
-    arr = [];
+//generate a 10x10 grid?
+generateGridArray(10, 10);
+
+//render the grid
+renderGridArray()
+
+function generateGridArray(width, height) {
+
+    //clear the array
+    gridArray = [];
+
+
     for (var i = 0; i < height; i++) {
         var row = [];
         for (var j = 0; j < width; j++) {
-            row.push(Math.floor(Math.random() * 2) == 1);
+
+
+            //flip a coin, decide if bird is hawk or a dove
+            if (Math.floor(Math.random() * 2) == 1) {
+                row.push({
+                    birdType: "hawk"
+                });
+            } else {
+                row.push({
+                    birdType: "dove"
+                });
+            }
+
         }
-        arr.push(row);
+        gridArray.push(row);
     }
 }
 
-function renderArr() {
+
+function renderGridArray() {
     //build string?
     var newGridHtml = '';
-    for (var i = 0; i < arr.length; i++) {
+    for (var i = 0; i < gridArray.length; i++) {
         newGridHtml += '<div class="row">';
-        for (var j = 0; j < arr[i].length; j++) {
+        for (var j = 0; j < gridArray[i].length; j++) {
             newGridHtml += '<div class="';
-            newGridHtml += arr[i][j] ? 'hawk' : 'dove';
+            newGridHtml += gridArray[i][j].birdType == "hawk" ? 'hawk' : 'dove';
             newGridHtml += ' cell"></div>';
         }
         newGridHtml += '</div>';
