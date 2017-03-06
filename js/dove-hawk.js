@@ -43,9 +43,11 @@ function renderGridArray() {
     for (var i = 0; i < gridArray.length; i++) {
         newGridHtml += '<div class="row">';
         for (var j = 0; j < gridArray[i].length; j++) {
-            newGridHtml += '<div class="';
+
+            newGridHtml += '<img src="images/';
             newGridHtml += gridArray[i][j].birdType == "hawk" ? 'hawk' : 'dove';
-            newGridHtml += ' cell"></div>';
+            newGridHtml += '.png">';
+            
         }
         newGridHtml += '</div>';
     }
