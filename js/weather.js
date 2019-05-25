@@ -21,7 +21,7 @@ function parseAndUpdateWidget(data) {
     console.log(parsedJson);
 
     var weatherDiv = $(".weather");
-    weatherDiv.html = "";
+    weatherDiv.empty();
     weatherDiv.append("Temp: " + parsedJson['main']['temp'])
     weatherDiv.append("<br />")
     weatherDiv.append("Today: " + parsedJson['weather'][0]['description'])
