@@ -1,10 +1,11 @@
 //Set the page to auto reload (to update)
-setTimeout(function () {
-    location.reload();
-}, 10000);
+// setTimeout(function () {
+//     location.reload();
+// }, 10000);
 
 
 
+document.body.requestFullscreen();
 
 $(function () {
     setInterval(updateClock, 500);
