@@ -15,7 +15,7 @@ function updateClock() {
     }
     var pastnoon = false;
     if (hours > 12) {
-        var hour = (hours - 12);
+        hours = (hours - 12);
         pastnoon = true;
     }
     var time = `${hours}:${mins}:${seconds} ${pastnoon ? "PM" : "AM"}`
