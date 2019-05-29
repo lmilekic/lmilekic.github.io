@@ -19,5 +19,6 @@ function updateClock() {
         pastnoon = true;
     }
     var time = `${hours}:${mins}:${seconds} ${pastnoon ? "PM" : "AM"}`
+    $(".clock").empty();
     $(".clock").html(time);
 }
