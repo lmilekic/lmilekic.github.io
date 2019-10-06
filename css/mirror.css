@@ -13,8 +13,12 @@ html{
     text-align:center;
 }
 
-
 .traffic{
+    font-size:200%;
+    text-align:center;
+}
+
+.countdown{
     font-size:200%;
     text-align:center;
 }
